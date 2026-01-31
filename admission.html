@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admissions - Apply Today for a Brighter Future</title>
+       <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 8px;
+            height: auto;
+            font-weight: BOLD;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), 
+                        url('https://mcp-tools-z-image-turbo.hf.space/--replicas/gf97b/gradio_api/file=/tmp/gradio/dc6bfb4649ebd230d736862bcc607b4fb78959f916f60b4e9defe934959b3e47/image.webp');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .admission-requirements {
+            background: white;
+            padding: 60px 0;
+        }
+
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .requirement-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .requirement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .requirement-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .application-process {
+            background: #ecf0f1;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .application-form {
+            background: white;
+            padding: 60px 0;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .submit-button {
+            width: 100%;
+            background: #27ae60;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: #229954;
+        }
+
+        .contact-info {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .contact-item h3 {
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+             <image src="logo.png" alt="logo" class="w-15 h-16" ></image>
+            <div class="logo"  >DINSHA PATEL COLLEGE OF COMPUTER SCIENCE</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#requirements">Requirements</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#apply">Apply Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Shape Your Future at DINSHA PATEL COLLEGE OF COMPUTER SCIENCE</h1>
+                <p>Join thousands of successful students who have transformed their lives through our world-class education programs.</p>
+                <a href="#apply" class="cta-button">Start Your Application Today</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="requirements" class="admission-requirements section">
+        <div class="container">
+            <h2 class="section-title">Admission Requirements</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h3>High School Diploma</h3>
+                    <p>Official transcripts showing successful completion of high school or equivalent GED certification.</p>
+                </div>
+                <div class="requirement-card">
+                    <h3>Standardized Tests</h3>
+                    <p>SAT or ACT scores required. Average SAT: 1200-1400, Average ACT: 24-30.</p>
+                </div>
+                <div class="requirement-card">
+                    <h3>GPA Requirements</h3>
+                    <p>Minimum cumulative GPA of 3.0 on a 4.0 scale. Competitive applicants have 3.5+.</p>
+                </div>
+                <div class="requirement-card">
+                    <h3>Letters of Recommendation</h3>
+                    <p>Two letters from teachers or counselors who can speak to your academic abilities.</p>
+                </div>
+                <div class="requirement-card">
+                    <h3>Personal Essay</h3>
+                    <p>A 500-650 word essay showcasing your personality, goals, and why you chose our college.</p>
+                </div>
+                <div class="requirement-card">
+                    <h3>Application Fee</h3>
+                    <p>Non-refundable application fee of $50. Fee waivers available for qualifying students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="application-process section">
+        <div class="container">
+            <h2 class="section-title">Application Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Account</h3>
+                    <p>Register for an online application account to start your journey with us.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Complete Application</h3>
+                    <p>Fill out the application form with your personal and academic information.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Submit Documents</h3>
+                    <p>Upload all required documents including transcripts, test scores, and essays.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Pay & Submit</h3>
+                    <p>Pay the application fee and submit your completed application for review.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apply" class="application-form section">
+        <div class="container">
+            <h2 class="section-title">Apply Now</h2>
+            <div class="form-container">
+                <form id="admissionForm">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="program">Program of Interest *</label>
+                        <select id="program" name="program" required>
+                            <option value="">Select a Program</option>
+                            <option value="business">Business Administration</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="computer-science">Computer Science</option>
+                            <option value="nursing">Nursing</option>
+                            <option value="education">Education</option>
+                            <option value="arts">Liberal Arts</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="startTerm">Intended Start Term *</label>
+                        <select id="startTerm" name="startTerm" required>
+                            <option value="">Select Term</option>
+                            <option value="fall-2024">Fall 2024</option>
+                            <option value="spring-2025">Spring 2025</option>
+                            <option value="summer-2025">Summer 2025</option>
+                            <option value="fall-2025">Fall 2025</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="gpa">Current GPA *</label>
+                        <input type="number" id="gpa" name="gpa" min="0" max="4" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="essay">Personal Essay (500-650 words) *</label>
+                        <textarea id="essay" name="essay" rows="6" placeholder="Tell us about yourself, your goals, and why you want to attend University College..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-info section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Contact Admissions</h2>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <p>+91 9909200553<br>Mon-Fri 8AM-6PM EST</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>info@dpccs.org<br></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Visit Us</h3>
+                    <p>DPCCS ,6th Mile, NH 64<br>palana  Road, Dantali . </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025  Dinsha patel College of computer science . All rights reserved. | Privacy Policy | Terms of Service<br><b>Made by Farhan Pijwala</b></p>
+        </div>
+    </footer>
+  
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('admissionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const formData = new FormData(this);
+            let isValid = true;
+            
+            // Check required fields
+            this.querySelectorAll('[required]').forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = '#e74c3c';
+                } else {
+                    field.style.borderColor = '#ddd';
+                }
+            });
+            
+            // Validate email
+            const email = formData.get('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                isValid = false;
+                document.getElementById('email').style.borderColor = '#e74c3c';
+            }
+            
+            // Validate GPA
+            const gpa = parseFloat(formData.get('gpa'));
+            if (isNaN(gpa) || gpa < 0 || gpa > 4) {
+                isValid = false;
+                document.getElementById('gpa').style.borderColor = '#e74c3c';
+            }
+            
+            if (isValid) {
+                // Simulate form submission
+                const submitButton = this.querySelector('.submit-button');
+                const originalText = submitButton.textContent;
+                submitButton.textContent = 'Submitting...';
+                submitButton.disabled = true;
+                
+                setTimeout(() => {
+                    alert('Thank you for your application! We will review your submission and contact you within 2-3 business days.');
+                    this.reset();
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                }, 2000);
+            } else {
+                alert('Please fill in all required fields correctly.');
+            }
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 62, 80, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Add animation to requirement cards when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.requirement-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

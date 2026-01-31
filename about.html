@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPCCS| About Us</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('http://static.photos/education/1200x630/2');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-link:hover {
+            color: #3b82f6;
+            transition: all 0.3s ease;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #3b82f6;
+            border: 3px solid white;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                     <image src="logo.png" alt="logo" class="w-15 h-16" ></image>
+                    <span class="font-bold text-xl text-gray-800">DINSHA PATEL COLLEGE OF COMPUTER SCIENCE</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-800 hover:text-blue-500 px-3 py-2 font-medium">Home</a>
+                    <a href="about.html" class="nav-link text-blue-500 px-3 py-2 font-medium">About</a>
+                    <a href="courses.html" class="nav-link text-gray-800 hover:text-blue-500 px-3 py-2 font-medium">Courses</a>
+                    <a href="admission.html" class="nav-link text-gray-800 hover:text-blue-500 px-3 py-2 font-medium">Admissions</a>
+                    <a href="#contact" class="nav-link text-gray-800 hover:text-blue-500 px-3 py-2 font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-800">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4">
+            <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Home</a>
+            <a href="about.html" class="block px-4 py-2 text-blue-500 hover:bg-blue-50">About</a>
+            <a href="courses.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Courses</a>
+            <a href="admissions.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Admissions</a>
+            <a href="contact.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero text-white pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">About DPCCS</h1>
+            <p class="text-xl md:text-2xl mb-8">Our mission, vision, and commitment to excellence in education</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6">Our History</h2>
+                    <p class="text-gray-600 mb-6">Founded in 1995, DPCCS began as a small college with just three departments and 200 students. Today, we've grown into a comprehensive university with over 15,000 students across eight faculties.</p>
+                    <p class="text-gray-600">Our journey has been marked by continuous innovation in teaching and research, always staying true to our founding principles of academic excellence, inclusivity, and service to society.</p>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <img src="http://static.photos/education/640x360/3" alt="University History" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pl-12" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold mb-6">Mission & Vision</h2>
+                    <p class="text-gray-600 mb-6">Our mission is to provide transformative educational experiences that prepare students to be ethical leaders and engaged citizens in a global society.</p>
+                    <p class="text-gray-600">We envision a world where education breaks down barriers and creates opportunities for all. By fostering innovation, critical thinking, and cultural understanding, we aim to be a catalyst for positive change.</p>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <img src="http://static.photos/education/640x360/4" alt="Mission Vision" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6">Our Values</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-500 mr-3 mt-1"></i>
+                            <span><strong>Excellence:</strong> We pursue the highest standards in teaching, research, and service.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-500 mr-3 mt-1"></i>
+                            <span><strong>Integrity:</strong> We uphold honesty, fairness, and ethical behavior in all we do.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-500 mr-3 mt-1"></i>
+                            <span><strong>Innovation:</strong> We embrace creativity and discovery to solve complex problems.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-500 mr-3 mt-1"></i>
+                            <span><strong>Diversity:</strong> We value and respect differences in people and ideas.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-blue-500 mr-3 mt-1"></i>
+                            <span><strong>Community:</strong> We foster collaboration and engagement within and beyond our campus.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <img src="http://static.photos/education/640x360/5" alt="Our Values" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">Our Journey</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Key milestones in our university's history</p>
+            </div>
+            <div class="relative max-w-3xl mx-auto">
+                <div class="border-l-2 border-blue-500 absolute h-full left-4 md:left-1/2 transform md:-translate-x-1/2"></div>
+                <div class="space-y-8">
+                    <div class="relative pl-12 md:pl-0 md:flex justify-between items-center" data-aos="fade-up">
+                        <div class="md:w-5/12 md:pr-8 md:text-right mb-4 md:mb-0">
+                            <h3 class="font-bold text-lg">1995</h3>
+                            <p class="text-gray-600">University founded with three departments</p>
+                        </div>
+                        <div class="hidden md:block w-2/12 flex justify-center">
+                            <div class="w-4 h-4 rounded-full bg-blue-500 border-4 border-white"></div>
+                        </div>
+                        <div class="md:w-5/12 md:pl-8 timeline-item">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="font-bold text-lg mb-2">Founding Year</h3>
+                                <p class="text-gray-600">Campus University opens its doors with 200 students in Arts, Sciences, and Business programs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative pl-12 md:pl-0 md:flex justify-between items-center" data-aos="fade-up">
+                        <div class="md:w-5/12 md:pr-8 md:text-right mb-4 md:mb-0 md:order-3">
+                            <h3 class="font-bold text-lg">2002</h3>
+                            <p class="text-gray-600">First graduate programs introduced</p>
+                        </div>
+                        <div class="hidden md:block w-2/12 flex justify-center md:order-2">
+                            <div class="w-4 h-4 rounded-full bg-blue-500 border-4 border-white"></div>
+                        </div>
+                        <div class="md:w-5/12 md:pl-8 md:order-1 timeline-item">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="font-bold text-lg mb-2">Graduate Expansion</h3>
+                                <p class="text-gray-600">University establishes its first Master's programs in Education and Computer Science.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative pl-12 md:pl-0 md:flex justify-between items-center" data-aos="fade-up">
+                        <div class="md:w-5/12 md:pr-8 md:text-right mb-4 md:mb-0">
+                            <h3 class="font-bold text-lg">2010</h3>
+                            <p class="text-gray-600">New science complex opens</p>
+                        </div>
+                        <div class="hidden md:block w-2/12 flex justify-center">
+                            <div class="w-4 h-4 rounded-full bg-blue-500 border-4 border-white"></div>
+                        </div>
+                        <div class="md:w-5/12 md:pl-8 timeline-item">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="font-bold text-lg mb-2">Campus Expansion</h3>
+                                <p class="text-gray-600">State-of-the-art science complex with 12 research labs opens, doubling our research capacity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative pl-12 md:pl-0 md:flex justify-between items-center" data-aos="fade-up">
+                        <div class="md:w-5/12 md:pr-8 md:text-right mb-4 md:mb-0 md:order-3">
+                            <h3 class="font-bold text-lg">2018</h3>
+                            <p class="text-gray-600">Ranked among top 100 universities</p>
+                        </div>
+                        <div class="hidden md:block w-2/12 flex justify-center md:order-2">
+                            <div class="w-4 h-4 rounded-full bg-blue-500 border-4 border-white"></div>
+                        </div>
+                        <div class="md:w-5/12 md:pl-8 md:order-1 timeline-item">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="font-bold text-lg mb-2">National Recognition</h3>
+                                <p class="text-gray-600">Ranked among the top 100 universities nationally for the first time in our history.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative pl-12 md:pl-0 md:flex justify-between items-center" data-aos="fade-up">
+                        <div class="md:w-5/12 md:pr-8 md:text-right mb-4 md:mb-0">
+                            <h3 class="font-bold text-lg">2023</h3>
+                            <p class="text-gray-600">Global partnerships established</p>
+                        </div>
+                        <div class="hidden md:block w-2/12 flex justify-center">
+                            <div class="w-4 h-4 rounded-full bg-blue-500 border-4 border-white"></div>
+                        </div>
+                        <div class="md:w-5/12 md:pl-8 timeline-item">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h3 class="font-bold text-lg mb-2">International Growth</h3>
+                                <p class="text-gray-600">Partnerships with 15 international universities create new study abroad opportunities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">University Leadership</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our dedicated leaders guide the university's vision and strategic direction</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up">
+                    <img src="http://static.photos/people/640x360/1" alt="President" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Dr. Elizabeth Thompson</h3>
+                        <p class="text-blue-500 font-medium mb-4">University President</p>
+                        <p class="text-gray-600">With over 20 years in higher education leadership, Dr. Thompson has championed innovation and accessibility in education.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/people/640x360/2" alt="Provost" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Dr. Robert Chen</h3>
+                        <p class="text-blue-500 font-medium mb-4">Provost & Academic VP</p>
+                        <p class="text-gray-600">Dr. Chen oversees all academic programs and faculty development, ensuring academic excellence across disciplines.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/people/640x360/3" alt="Finance VP" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Ms. Angela Martinez</h3>
+                        <p class="text-blue-500 font-medium mb-4">VP of Finance & Administration</p>
+                        <p class="text-gray-600">With extensive experience in university finance, Ms. Martinez ensures the university's financial health and sustainability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="bg-blue-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div data-aos="fade-up">
+                    <div class="text-4xl font-bold mb-2">15,000+</div>
+                    <div class="text-lg">Students</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-bold mb-2">1,200+</div>
+                    <div class="text-lg">Faculty Members</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-bold mb-2">120+</div>
+                    <div class="text-lg">Degree Programs</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl font-bold mb-2">25+</div>
+                    <div class="text-lg">Research Centers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accreditation -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">Accreditation & Recognition</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our commitment to quality education is recognized by leading accrediting bodies</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm flex justify-center items-center h-32" data-aos="fade-up">
+                    <img src="http://static.photos/education/320x240/1" alt="Accreditation 1" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex justify-center items-center h-32" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/education/320x240/2" alt="Accreditation 2" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex justify-center items-center h-32" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/education/320x240/3" alt="Accreditation 3" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex justify-center items-center h-32" data-aos="fade-up" data-aos-delay="300">
+                    <img src="http://static.photos/education/320x240/4" alt="Accreditation 4" class="h-16 object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div id="contact">
+                    <h3 class="text-xl font-bold mb-4">DPCCS</h3>
+                    <p class="text-gray-400">Shaping futures through excellence in education since 1995.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="youtube"></i></a>
+                    </div> 
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="courses.html" class="text-gray-400 hover:text-white">Courses</a></li>
+                        <li><a href="admissions.html" class="text-gray-400 hover:text-white">Admissions</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Academic</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Academic Calendar</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Library</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Research</a></li>
+                        <li><a href="FACULTY.HTML" class="text-gray-400 hover:text-white">Faculties</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Student Portal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span class="text-gray-400">DPCCS ,6th Mile, NH 64 - Palana Road, Dantali.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span class="text-gray-400">info@dpccs.org</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-2 mt-1 w-4 h-4"></i>
+                            <span class="text-gray-400">+91 9909200553</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 DPCCS. All rights reserved. <span class="font-bold text-blue-400"><br> Made by Farhan Pijwala</span></p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            feather.replace();
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
