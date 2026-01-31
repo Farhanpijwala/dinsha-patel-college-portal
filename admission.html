@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Admissions - Apply Today for a Brighter Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
        <link rel="icon" type="image/x-icon" href="logo.png">
     <style>
         * {
@@ -23,6 +24,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+
         }
 
         header {
@@ -42,11 +44,24 @@
             align-items: center;
         }
 
-        .logo {
-            width: 8px;
-            height: auto;
-            font-weight: BOLD;
-        }
+       .logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;              /* controls space between logo & text */
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.logo-text {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: bold;
+}
 
         .nav-links {
             display: flex;
@@ -230,6 +245,7 @@
             outline: none;
             border-color: #3498db;
         }
+     
 
         .submit-button {
             width: 100%;
@@ -311,10 +327,12 @@
     </style>
 </head>
 <body>
-    <header>
+    <header >
         <nav class="container">
-             <image src="logo.png" alt="logo" class="w-15 h-16" ></image>
-            <div class="logo"  >DINSHA PATEL COLLEGE OF COMPUTER SCIENCE</div>
+           <div class="logo flex items-center">
+  <img src="logo.png" alt="logo" class="logo-img">
+  <span class="logo-text" >DINSHA PATEL COLLEGE OF COMPUTER SCIENCE</span>
+</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#requirements">Requirements</a></li>
@@ -399,7 +417,7 @@
         <div class="container">
             <h2 class="section-title">Apply Now</h2>
             <div class="form-container">
-                <form id="admissionForm">
+                <form id="admissionForm" action="https://forsubmit.co/farhanghandhi007@gmail.com" method="post">
                     <div class="form-group">
                         <label for="firstName">First Name *</label>
                         <input type="text" id="firstName" name="firstName" required>
